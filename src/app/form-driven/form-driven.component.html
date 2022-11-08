@@ -1,0 +1,34 @@
+<form (ngSubmit)="createHero()" #f="ngForm">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name Hero</label>
+    <input type="text" class="form-control" name="name" ngModel required />
+  </div>
+  <div class="mb-3">
+    <label for="alterEgo" class="form-label">Alter Ego Hero</label>
+    <input type="text" class="form-control" name="alterEgo" ngModel required />
+  </div>
+  <div class="mb-3">
+    <label for="power" class="form-label">Power</label>
+    <select class="form-select" name="power" ngModel aria-label="Default select example" required>
+      <option selected>Select Hero Power</option>
+      <option>Flying</option>
+      <option>Mindreader</option>
+      <option>Ubiquity</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="enemy" class="form-label">Enemy Hero</label>
+    <input type="text" class="form-control" name="enemy" ngModel required maxlength="10" aria-describedby="planetHelp" />
+    <div name="enemyHelp" class="form-text">Max 10 characters</div>
+  </div>
+  <div class="mb-3">
+    <label for="planet" class="form-label">Planet Hero</label>
+    <input type="text" class="form-control" name="planet" ngModel aria-describedby="planetHelp" required minlength="5" />
+    <div name="planetHelp" class="form-text">Min 5 characters</div>
+  </div>
+  <div class="mb-3">
+    <label for="weakness" ngModel class="form-label">Weakness</label>
+    <input type="text" class="form-control" name="weakness" ngModel />
+  </div>
+  <button type="submit" class="btn btn-primary">Create Hero</button>
+</form>
